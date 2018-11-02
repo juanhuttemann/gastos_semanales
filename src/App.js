@@ -34,9 +34,24 @@ class App extends Component {
 
     gastos[`gastos${Date.now()}`] = gasto
 
+    this.restartPresupuesto(gasto.cantidadGasto)
+
     this.setState({
       gastos
     })
+  }
+
+  restartPresupuesto = cantidad => {
+    let restar = Number(cantidad)
+
+    let restante = this.state.restante;
+
+    restante -= restar;
+
+    this.setState({
+      restante: restante
+    })
+     
   }
 
   render() {

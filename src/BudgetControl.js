@@ -11,6 +11,7 @@ class BudgetControl extends Component {
                     />
                 
                 <Remaining
+                    presupuesto = {this.props.presupuesto}
                     restante={this.props.restante}
                 />
             </React.Fragment>
