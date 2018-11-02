@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Form from './Form';
-import List from './List';
-import BudgetControl from './BudgetControl';
+import Header from './components/Header';
+import Form from './components/Form';
+import List from './components/List';
+import BudgetControl from './components/BudgetControl';
 import {validarPresupuesto} from './Helper';
 
 class App extends Component {

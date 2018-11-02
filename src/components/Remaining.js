@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {revisarPresupuesto} from './Helper';
+import {revisarPresupuesto} from '../Helper';
 
 class Remaining extends Component {
     render() {
