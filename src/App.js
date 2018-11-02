@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Form from './Form';
+import List from './List'
 
 class App extends Component {
   state = {
@@ -17,16 +18,13 @@ class App extends Component {
     this.setState({
       gastos
     })
-
-    
-    
   }
 
   render() {
     return (
-      <div className="App">
-        <Header titulo="Gastos Semanales"/>
-        <div className="container">
+      <div className="container">
+          <Header titulo="Gastos Semanales"/>
+      <div className="jumbotron">
           <div className="row">
             <div className="col-md-6">
                 <Form
@@ -34,7 +32,9 @@ class App extends Component {
                 />
             </div>
             <div className="col-md-6">
-              
+              <List
+                gastos = {this.state.gastos}
+              /> 
             </div>
           </div>
         </div>

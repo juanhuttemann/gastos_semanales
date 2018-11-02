@@ -15,6 +15,7 @@ class Form extends Component {
 
         this.props.agregarGasto(gasto);
         
+        e.currentTarget.reset();
     }
 
     render(){
