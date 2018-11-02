@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 
 class Budget extends Component {
     render() {
@@ -8,6 +10,10 @@ class Budget extends Component {
             </div>
         )
     }
+}
+
+Budget.propTypes = {
+    presupuesto: PropTypes.string.isRequired
 }
 
 export default Budget;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Form extends Component {
     nombreGasto     = React.createRef();
@@ -34,6 +35,10 @@ class Form extends Component {
             </form>
         )
     }
+}
+
+Form.propTypes = {
+    agregarGasto: PropTypes.func.isRequired
 }
 
 export default Form;
