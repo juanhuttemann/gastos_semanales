@@ -28,7 +28,7 @@ class Form extends Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="cantidadGasto">Cantidad:</label>
-                    <input ref={this.cantidadGasto} type="text" className="form-control" id="cantidadGasto" placeholder="Ej. 40" />
+                    <input ref={this.cantidadGasto} type="text" className="form-control" id="cantidadGasto" placeholder="Ej. 80.000" />
                 </div>
                 <button type="submit" className="btn btn-primary">Agregar</button>
             </form>

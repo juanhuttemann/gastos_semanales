@@ -8,7 +8,7 @@ class Expense extends Component {
                 <p>
                     {nombreGasto} 
                     <span className="badge badge-primary badge-pill float-right">
-                         {cantidadGasto}
+                        Gs. {cantidadGasto}
                     </span>
                 </p>
             </li>

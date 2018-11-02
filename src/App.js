@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Form from './Form';
-import List from './List'
+import List from './List';
+import BudgetControl from './BudgetControl';
+import {validarPresupuesto} from './Helper';
 
 class App extends Component {
   state = {
@@ -9,6 +11,23 @@ class App extends Component {
       restante: '',
       gastos: {}
     }
+
+  componentDidMount(){
+    this.obtenerPresupuesto();
+  }
+
+  obtenerPresupuesto = () => {
+    let presupuesto = prompt("¿Cuál es el presupuesto?")
+    let resultado = validarPresupuesto(presupuesto)
+    if(resultado){
+      this.setState({
+        presupuesto: presupuesto,
+        restante: presupuesto
+      })
+    } else {
+      this.obtenerPresupuesto();
+    }
+  }
 
   agregarGasto = gasto => {
     const gastos = {...this.state.gastos}
@@ -34,6 +53,11 @@ class App extends Component {
             <div className="col-md-6">
               <List
                 gastos = {this.state.gastos}
+              />
+
+              <BudgetControl
+                presupuesto={this.state.presupuesto}
+                restante={this.state.restante}
               /> 
             </div>
           </div>
